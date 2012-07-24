@@ -1,0 +1,19 @@
+﻿<html>
+	<head>
+		<title>Funders list</title>
+	</head>
+	<body>
+
+	<h1>Funders list</h1>  
+	
+	{% if funders %}
+		{% for f in funders %}
+			<p>{{ f.name }} | {{ f.country }}</p>
+		{% endfor %}
+	{% else %}
+		<h2>No funder found</h2>
+	{% endif %}
+	
+
+	</body>
+</html>

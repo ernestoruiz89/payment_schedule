@@ -1,0 +1,20 @@
+﻿<html>
+	<head>
+		<title>Add funder</title>
+	</head>
+	<body>
+
+	<h1>Add funder</h1>
+	
+	<form action="" method="POST">
+		{% csrf_token %}
+		{{ form.as_p }} 
+		<input type="submit" value="Save"></input>
+		<input type="reset" value="Reset"></input>
+	</form> <br/>
+	
+	{{ info }}
+	
+
+	</body>
+</html>

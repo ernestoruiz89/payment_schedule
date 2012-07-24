@@ -1,0 +1,22 @@
+﻿<html>
+	<head>
+		<title>Contact us</title>
+	</head>
+	<body>
+	{% if send_info %}
+		Thank you for your comment!
+		
+		<p>Email = {{email}}</p>
+		<p>Title = {{title}}</p>
+		<p>Text = {{text}}</p>
+	{% else %}	
+		<form action="" method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<input type="submit" value="submit"/>
+	
+		</form>
+	{% endif %}
+
+	</body>
+</html>

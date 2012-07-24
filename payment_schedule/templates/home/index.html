@@ -1,0 +1,32 @@
+﻿
+{% extends 'base.html' %}
+{% block title %} Dashboard {% endblock %}
+
+{% block totalDebtWidget %} 
+	<!-- General balance widget -->
+    <div class="genBalance">
+        <a href="#" title="" class="amount">
+            <span>Deuda total</span>
+            <span class="balanceAmount">{{ difDebtPay }}</span>
+        </a>
+        <a href="#" title="" class="amChanges">
+            <strong class="sPositive">+0.6%</strong>
+        </a>
+    </div> 
+{% endblock %}
+
+{% block nextPaymentWidget %}
+<!-- Next update progress widget -->
+    <div class="nextUpdate">
+        <ul>
+            <li>Próximo pago:</li>
+            <li><strong>{{ nextPayment }}</strong></li>
+        </ul>
+       <!-- <div class="pWrapper"><div class="progressG" title="78%"></div></div>-->
+    </div>
+{% endblock %}
+
+
+
+{% block content %} Hola mundooo {% endblock %}
+	
