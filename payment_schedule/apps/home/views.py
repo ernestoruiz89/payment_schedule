@@ -46,15 +46,8 @@ def index_view(request):
 		return index.payment_date.date()	
 		
 	#Variables a ser mostradas en el html	
-	today = datetime.datetime.now().date()
-	nPay = payment.objects.get(id=1)
-	
 	difDebtPay = '{:20,.2f}'.format((deb() - pay()))
-	nextPayment = datetime.datetime.strptime(str(nextPayment()),"%Y-%m-%d").strftime(' %d/%m/%Y ')
-	
-	
-	
-		
+	nextPayment = nextPayment() #datetime.datetime.strptime(str(nextPayment()),"%Y-%m-%d").strftime(' %d/%m/%Y ')		
 	ctx = {'difDebtPay':difDebtPay,'nextPayment' :nextPayment}
 
 	return render_to_response('home/index.html',ctx,context_instance=RequestContext(request))

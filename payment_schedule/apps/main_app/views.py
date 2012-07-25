@@ -1,7 +1,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from payment_schedule.apps.main_app.forms import addFunderForm
-from payment_schedule.apps.main_app.models import funder
+from payment_schedule.apps.main_app.models import funder, loan, payment
 from datetime import datetime 
 
 def add_funder_view(request):
@@ -28,4 +28,8 @@ def add_funder_view(request):
 		form = addFunderForm()
 		ctx = {'form':form}
 		return render_to_response('schedule/addfunder.html',ctx,context_instance=RequestContext(request))
-
+		
+def schedule_table_view(request):
+	fnd = funder.objects.filter(status=True)
+	ctx = {'funders':fnd}
+	return render_to_response('schedule/scheduletable.html',ctx,context_instance=RequestContext(request))
