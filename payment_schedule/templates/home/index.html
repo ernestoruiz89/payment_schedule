@@ -19,8 +19,10 @@
 <!-- Next update progress widget -->
     <div class="nextUpdate">
         <ul>
-            <li>Próximo pago:</li>
-            <li><strong>{{ nextPayment }}</strong></li>
+			
+            <li>Próximo pago en {{ nextPayment|timeuntil }}:</li>
+            <li><strong>{{ nextPayment|date:"d  M. Y" }}</strong></li>
+			
         </ul>
        <!-- <div class="pWrapper"><div class="progressG" title="78%"></div></div>-->
     </div>
