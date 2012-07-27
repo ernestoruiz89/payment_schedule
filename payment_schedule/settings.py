@@ -125,7 +125,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 	'payment_schedule.apps.main_app',	
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+     'django.contrib.admindocs',
 )
 
 # A sample logging configuration. The only tangible logging

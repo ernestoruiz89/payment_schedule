@@ -14,5 +14,7 @@ urlpatterns = patterns('',
 	url(r'^', include('payment_schedule.apps.home.urls')),
 	url(r'^', include('payment_schedule.apps.main_app.urls')),
     # Uncomment the next line to enable the admin:
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+	url(r'^admin/', include(admin.site.urls)),
+	
 )
