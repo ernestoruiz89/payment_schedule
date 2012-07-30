@@ -22,35 +22,39 @@ def index_view(request):
 		for p in pay:
 			total += p.amortization			
 		return total;	
-		
+
 	def nextPayment():
-		today = datetime.datetime.now().date()
-		cerca = 0;
-		index = -200
-		primero = True
-		nPay = list(payment.objects.all())
-		nextDate = 0
-		for i in nPay:	
-			if(primero):
-				cerca = i.payment_date.date() - today
-				index = i
-				primero = False
-				
-			if(((i.payment_date.date() - today) < cerca) and ((i.payment_date.date() >= today))):
-				cerca = i.payment_date.date() - today
-				index = i
+		if not payment.objects.all():
+			return "No hay pagos"
+		else:
+			today = datetime.datetime.now().date()
+			cerca = 0			
+			primero = True
+			nPay = list(payment.objects.all())
+			nextDate = 0
 		
-		if((index.payment_date.date() < today)):
-			return "No hay datos"
+			for i in nPay:	
+				if(primero):
+					cerca = i.payment_date.date() - today
+					index = i
+					primero = False
+					
+				if(((i.payment_date.date() - today) < cerca) and ((i.payment_date.date() >= today))):
+					cerca = i.payment_date.date() - today
+					index = i
 			
-		return index.payment_date.date()	
-		
+			if((index.payment_date.date() > today)):
+				return index.payment_date.date()		
+			else:
+				return today	
+						
+	
 	#Variables a ser mostradas en el html	
-	today = datetime.datetime.now().date()
+	todayDate = datetime.datetime.now().date()
 	difDebtPay = '{:20,.2f}'.format((deb() - pay()))
-	nextPayment = nextPayment() #datetime.datetime.strptime(str(nextPayment()),"%Y-%m-%d").strftime(' %d/%m/%Y ')
-	payLeft = nextPayment - today
-	ctx = {'difDebtPay':difDebtPay,'nextPayment' :nextPayment,'payLeft':payLeft}
+	#datetime.datetime.strptime(str(nextPayment()),"%Y-%m-%d").strftime(' %d/%m/%Y ')
+	payLeft = nextPayment()
+	ctx = {'difDebtPay':difDebtPay,'nextPayment':payLeft,'todayDate':todayDate}
 
 	return render_to_response('home/index.html',ctx,context_instance=RequestContext(request))
 

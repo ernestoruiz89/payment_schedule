@@ -20,7 +20,11 @@
     <div class="nextUpdate">
         <ul>
 			
-            <li>Próximo pago en {{ nextPayment|timeuntil }}:</li>
+            <li>
+		
+				{{ nextPayment|timeuntil }}
+				
+			</li>
             <li><strong>{{ nextPayment|date:"d  M. Y" }}</strong></li>
 			
         </ul>

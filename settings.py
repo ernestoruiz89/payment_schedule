@@ -31,7 +31,7 @@ TIME_ZONE = 'America/Managua'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'es-ni'
+LANGUAGE_CODE = 'es-NI'
 
 SITE_ID = 1
 
@@ -104,7 +104,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'payment_schedule.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'payment_schedule.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 TEMPLATE_DIRS = (
 	os.path.join(os.path.dirname(__file__), 'templates'),
@@ -158,9 +158,9 @@ LOGGING = {
 }
 
 #EMAIL INFO
-EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST = "mail.wbapps.com"
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'ruize.20.07@gmail.com'
-EMAIL_HOST_PASSWORD = 'nicaragua01'
+EMAIL_HOST_USER = 'noreply@wbapps.com'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 
