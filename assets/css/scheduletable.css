@@ -30,6 +30,7 @@ td:last-child{
 }
 
 .institucion td:first-child,.institucion td:last-child{
+	vertical-align: middle;
 	border-left: 0.0pt solid transparent;
 	border-right: 0.0pt solid transparent;
 }
@@ -52,11 +53,14 @@ td:last-child{
 .anio_activo{
 	height: 30pt;
 	font-size: 11.0pt;
+
 }	
 
 .anio_activo td{
+	vertical-align: middle;
 	border-top: 2.0pt solid rgb(51,152,101);
 	border-bottom: 2.0pt solid rgb(51,152,101);
+
 }
 
 .anio_activo td:first-child{

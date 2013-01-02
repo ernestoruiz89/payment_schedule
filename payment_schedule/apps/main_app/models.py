@@ -29,7 +29,7 @@ class loan(models.Model):
 	received_at  	= models.DateTimeField('Received date')
 	status			= models.BooleanField(default=True)
 	def __unicode__(self):		
-		return self.funder.name
+		return '%s | %s| %s'%(self.id,self.principal,self.funder.name)
 	
 class payment (models.Model):
 	loan     		= models.ForeignKey(loan)
@@ -38,8 +38,11 @@ class payment (models.Model):
 	payment_date	= models.DateTimeField('projected date')
 	payment_at		= models.DateTimeField('Payment date')
 	status			= models.BooleanField(default=False)
-	def __unicode__(self):		
-		return self.loan.funder.name
+	def __unicode__(self):	
+		fecha = self.payment_date
+		dateFormat = fecha.strftime("%B %d, %Y ")
+		pago = '{:20,.2f}'.format(self.amortization + self.interest)
+		return 'U$ %s | %s | %s'%(pago, dateFormat, self.loan.funder.name)
 
 
 
