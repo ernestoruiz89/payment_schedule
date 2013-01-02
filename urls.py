@@ -4,13 +4,9 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns('payment_schedule.apps.main_app.views',
     # Examples:
-    # url(r'^$', 'payment_schedule.views.home', name='home'),
-    # url(r'^payment_schedule/', include('payment_schedule.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^$', 'schedule_table_view', name='home'),
 	url(r'^', include('payment_schedule.apps.home.urls')),
 	url(r'^', include('payment_schedule.apps.main_app.urls')),
     # Uncomment the next line to enable the admin:

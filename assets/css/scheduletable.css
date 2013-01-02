@@ -1,0 +1,105 @@
+@import "reset.css";
+
+.calendario{
+	width:99%;
+	margin:0 auto;
+}
+
+table{
+	color:#333;
+	font-size: 9.0pt;
+	font-family: "Times New Roman", serif;
+	text-align:center;	
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td{
+	border-left: 1.0pt solid rgb(51,152,101); /*Borde Verde*/
+	padding-left: 5pt;
+	padding-right: 5pt;
+}
+
+td:last-child{
+	border-right: 1.0pt solid rgb(51,152,101);
+}
+
+.institucion{
+	height: 50pt;
+	font-size: 11.0pt;
+}
+
+.institucion td:first-child,.institucion td:last-child{
+	border-left: 0.0pt solid transparent;
+	border-right: 0.0pt solid transparent;
+}
+
+.tc td{
+	border-top: 2.0pt solid rgb(51,152,101);
+	border-left: 0.0pt solid transparent;		
+}
+
+.tc td:first-child{
+	border-top: 0.0pt solid transparent;
+	border-left: 0.0pt solid transparent;
+	background:white;		
+}
+
+.tc td:last-child{
+		border-right: 0.0pt solid  transparent;		
+}
+
+.anio_activo{
+	height: 30pt;
+	font-size: 11.0pt;
+}	
+
+.anio_activo td{
+	border-top: 2.0pt solid rgb(51,152,101);
+	border-bottom: 2.0pt solid rgb(51,152,101);
+}
+
+.anio_activo td:first-child{
+	border-top: 0.0pt solid rgb(51,152,101);
+	border-left: 0.0pt solid rgb(51,152,101);
+	background:white;
+}
+
+.inversor{
+	background: rgb(255, 255, 153); /*ambar*/
+}
+
+.tc,.anio_activo,.col_left,.col_right,.meses{
+	background: rgb(204, 255, 255); /*Verde*/
+}
+
+.institucion,.tc,.anio_activo,.meses,.inversor,.financiamiento,.pagos,.principal{ font-weight: bold; }	
+.financiamiento td,.pagos td,.principal td { border-bottom: 1.0pt solid rgb(51,152,101); }
+
+.meses td,.inversor td,.interes td,.total_interes td{
+	border-bottom: 2.0pt solid rgb(51,152,101);
+}
+
+.numeros{	
+	text-align:right;
+}
+
+.total_saldos,.total_interes,.total_pagar{
+	text-align: left;
+	font-weight: bold;
+}
+
+.separador td{
+	height: 2pt;
+	border-bottom: 2.0pt solid rgb(51,152,101);
+	background: rgb(255, 255, 255); /*ambar*/
+	border-left: 0.0pt solid rgb(51,152,101);
+	border-right: 0.0pt solid rgb(51,152,101);
+}
+.total_saldos td, .total_pagar td{
+	border-bottom: 1.0pt solid rgb(51,152,101);
+}
+
+.total_pagar td{
+	background: rgb(255, 255, 140); /*ambar*/
+}

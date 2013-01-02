@@ -1,82 +1,484 @@
 ﻿{% extends 'base.html' %}
+{% block mostrar_calendario %}
+<div class="calendario">
+<table cellpadding="0" width="100%">
+	<thead>
+		<tr class="institucion"><td colspan="16">ASOCIACION ALTERNATIVA PARA EL DESARROLLO INTEGRAL DE LAS MUJERES (ADIM)
+													<br/>OBLIGACIONES FINANCIERAS A PAGAR EN DOLARES</span></td></tr>
+		<tr class="tc"><!-- BEGIN TASA_CAMBIO -->
+			<td>&nbsp;</td>
+			<td>T/C</td>
+			<td>23.0718</td>	
+			<td>23.1612</td>	
+			<td>23.2571</td>	
+			<td>23.3503</td>	
+			<td>23.4470</td>	
+			<td>23.5409</td>	
+			<td>23.6384</td>	
+			<td>23.7363</td>	
+			<td>23.8314</td>	
+			<td>23.9301</td>	
+			<td>24.0260</td>	
+			<td>24.1255</td>
+		</tr><!-- END TASA_CAMBIO -->
 
-{% block title %} Calendario de pagos {% endblock %}
-
-
-{% block content %} 
-
-	<!-- Static table -->
-        <div class="widget">
-          <div class="title"><img src="../assets/images/icons/dark/frames.png" alt="" class="titleIcon" />
-			<h6>Calendario de pagos</h6>
-		  </div>
-            <table cellpadding="0" cellspacing="0" width="100%" class="sTable">
-                <thead>
-                    <tr>
-                        <td>Inversor</td>
-                        <td>Enero</td>
-                        <td>Febrero</td>
-                        <td>Marzo</td>
-                        <td>Abril</td>
-						<td>Mayo</td>
-                        <td>Junio</td>                       
-						<td>></td>                      
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>                       
-                    </tr>
-                    <tr>
-                        <td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
+		<tr class="anio_activo"><!-- BEGIN AÑO_ACTIVO -->
+			<td>&nbsp;</td>
+			<td>2011</td>
+			<td colspan="12" >A Ñ O &nbsp; 2 0 1 2</td>
+			<td>Total Año</td>
+			<td>2012</td>
+		</tr><!-- END AÑO_ACTIVO -->
+		
+		<tr class="meses"> <!-- BEGIN MESES -->
+			<td>Fuentes</td>
+			<td>Saldos</td>			
+			<td>Enero</td>
+			<td>Febrero</td>
+			<td>Marzo</td>
+			<td>Abril</td>
+			<td>Mayo</td>
+			<td>Junio</td>                       
+			<td>Julio</td>
+			<td>Agosto</td>
+			<td>Septiembre</td>
+			<td>Octubre</td>
+			<td>Noviembre</td>
+			<td>Diciembre</td>
+			<td>Total</td>
+			<td>Saldos</td>				
+		</tr><!-- END MESES -->
+	</thead>
+	<tbody>	
 	
+		<tr class="inversor"> <!-- BEGIN INVERSOR -->
+			<td>Ana Padilla Lopez</td>			
+				<td class="numeros">51,806.00</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">37,280.71</td>
+				<td class="numeros">37,280.71</td>
+				<td class="numeros">-</td>
+				<td class="numeros">37,280.71</td>
+			</div>
+		</tr> <!-- END INVERSOR -->
+		
+		<tr class="financiamiento"> <!-- BEGIN FINANCIAMIENTO -->
+			<td class="col_left">Letra LC 01 - 04</td>
+			<td class="col_left numeros">51,806.00</td>
+			<td class="numeros">52,863.69</td>
+			<td class="numeros">52,863.69</td>
+			<td class="numeros">52,863.69</td>
+			<td class="numeros">52,863.69</td>
+			<td class="numeros">52,863.69</td>
+			<td class="numeros">47,158.59</td>
+			<td class="numeros">47,158.59</td>
+			<td class="numeros">47,158.59</td>
+			<td class="numeros">47,158.59</td>
+			<td class="numeros">47,158.59</td>
+			<td class="numeros">37,280.71</td>
+			<td class="numeros">37,280.71</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">37,280.71</td>
+		</tr> <!-- END FINANCIAMIENTO -->
+		
+		<tr class="pagos"> <!-- BEGIN PAGOS -->
+			<td class="col_left">PAGOS</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">1,175.22</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">7,699.44</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">11,680.24</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">20,554.90</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PAGOS -->
+		
+		<tr class="principal"> <!-- BEGIN PRINCIPAL -->
+			<td class="col_left">Principal</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">5,705.10</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">9,877.88</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">15,582.98</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PRINCIPAL -->
+		
+		<tr class="interes"> <!-- BEGIN INTERES -->
+			<td class="col_left">Interes</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">1,175.22</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">1,994.34</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">1,802.36</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">4,971.92</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END INTERES -->
+		
+
+		<tr class="inversor"> <!-- BEGIN INVERSOR -->
+			<td>Hector Zamora Aguirre</td>			
+				<td class="numeros">51,806.00</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">52,863.69</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">47,158.59</td>
+				<td class="numeros">37,280.71</td>
+				<td class="numeros">37,280.71</td>
+				<td class="numeros">-</td>
+				<td class="numeros">37,280.71</td>
+			</div>
+		</tr> <!-- END INVERSOR -->		
+
+		<tr class="financiamiento"> <!-- BEGIN FINANCIAMIENTO -->
+			<td class="col_left">Letra LC 01 - 08</td>
+			<td class="col_left numeros">13,021.71</td>
+			<td class="numeros">13,021.71</td>
+			<td class="numeros">13,287.57</td>
+			<td class="numeros">13,287.57</td>
+			<td class="numeros">13,287.57</td>
+			<td class="numeros">13,552.96</td>
+			<td class="numeros">13,552.96</td>
+			<td class="numeros">13,552.96</td>
+			<td class="numeros">13,829.67</td>
+			<td class="numeros">13,829.67</td>
+			<td class="numeros">13,829.67</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END FINANCIAMIENTO -->
+		
+		<tr class="pagos"> <!-- BEGIN PAGOS -->
+			<td class="col_left">PAGOS</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">295.40</td>
+			<td class="numeros">-</td>
+			<td class="numeros"></td>
+			<td class="numeros">294.87</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">307.45</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">14,143.40</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">15,041.12</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PAGOS -->
+		
+		<tr class="principal"> <!-- BEGIN PRINCIPAL -->
+			<td class="col_left">Principal</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">13,829.67</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">13,829.67</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PRINCIPAL -->
+		
+		<tr class="interes"> <!-- BEGIN INTERES -->
+			<td class="col_left">Interes</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">295.40</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">294.87</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">307.45</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">313.73</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">1,211.45</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END INTERES -->
+
+				<tr class="financiamiento"> <!-- BEGIN FINANCIAMIENTO -->
+			<td class="col_left">Letra LC 02 - 03</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">10,000.00</td>
+			<td class="numeros">10,000.00</td>
+			<td class="numeros">10,000.00</td>
+			<td class="numeros">10,246.33</td>
+			<td class="numeros">10,246.33</td>
+			<td class="numeros">10,246.33</td>
+			<td class="numeros">10,453.25</td>
+			<td class="numeros">10,453.25</td>
+			<td class="numeros">10,453.25</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END FINANCIAMIENTO -->
+		
+		<tr class="pagos"> <!-- BEGIN PAGOS -->
+			<td class="col_left">PAGOS</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">273.70</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">229.91</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">10,703.27</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">11,206.88</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PAGOS -->
+		
+		<tr class="principal"> <!-- BEGIN PRINCIPAL -->
+			<td class="col_left">Principal</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">10,453.25</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">10,453.25</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PRINCIPAL -->
+		
+		<tr class="interes"> <!-- BEGIN INTERES -->
+			<td class="col_left">Interes</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">273.70</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">229.91</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">250.02</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">753.63</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END INTERES -->
+
+						<tr class="financiamiento"> <!-- BEGIN FINANCIAMIENTO -->
+			<td class="col_left">Letra LC 03 - 01</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">25,000.00</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">25,000</td>
+		</tr> <!-- END FINANCIAMIENTO -->
+		
+		<tr class="pagos"> <!-- BEGIN PAGOS -->
+			<td class="col_left">PAGOS</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PAGOS -->
+		
+		<tr class="principal"> <!-- BEGIN PRINCIPAL -->
+			<td class="col_left">Principal</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END PRINCIPAL -->
+		
+		<tr class="interes"> <!-- BEGIN INTERES -->
+			<td class="col_left">Interes</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END INTERES -->
+
+		<tr class="separador"><!-- BEGIN AÑO_ACTIVO -->			
+			<td colspan="16" ></td>			
+		</tr><!-- END AÑO_ACTIVO -->
+		
+		<tr class="total_saldos"> <!-- BEGIN TOTAL_SALDOS -->
+			<td class="col_left">TOTAL SALDOS</td>
+			<td class="col_left numeros">64,827.71</td>
+			<td class="numeros">75,885.40</td>
+			<td class="numeros">76,151.26</td>
+			<td class="numeros">76,151.26</td>
+			<td class="numeros">76,397.59</td>
+			<td class="numeros">76,662.98</td>
+			<td class="numeros">70,957.88</td>
+			<td class="numeros">71,164.80</td>
+			<td class="numeros">71,441.51</td>
+			<td class="numeros">71,441.51</td>
+			<td class="numeros">60,988.26</td>
+			<td class="numeros">37,280.71</td>
+			<td class="numeros">62,280.71</td>
+			<td class="col_right numeros">-</td>
+			<td class="col_right numeros">62,280.71</td>
+		</tr> <!-- END TOTAL_SALDOS -->
+
+		<tr class="total_pagar"> <!-- BEGIN TOTAL_PAGAR -->
+			<td class="col_left">TOTAL A PAGAR</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">1,175.22</td>
+			<td class="numeros">295.40</td>
+			<td class="numeros">-</td>
+			<td class="numeros">273.70</td>
+			<td class="numeros">294.87</td>
+			<td class="numeros">7,699.44</td>
+			<td class="numeros">229.91</td>
+			<td class="numeros">307.45</td>
+			<td class="numeros">-</td>
+			<td class="numeros">10,703.27</td>
+			<td class="numeros">25,823.64</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">46,802.90</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END TOTAL_PAGAR -->
+
+		<tr class="total_saldos"> <!-- BEGIN TOTAL_PRINCIPAL -->
+			<td class="col_left">TOTAL PRINCIPAL</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">5,705.10</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">-</td>
+			<td class="numeros">10,453.25</td>
+			<td class="numeros">23,707.55</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">39,865.90</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END TOTAL_PRINCIPAL -->
+
+		<tr class="total_interes"> <!-- BEGIN TOTAL_INTERES -->
+			<td class="col_left">TOTAL INTERES</td>
+			<td class="col_left numeros">-</td>
+			<td class="numeros">1,175.22</td>
+			<td class="numeros">295.40</td>
+			<td class="numeros">-</td>
+			<td class="numeros">273.70</td>
+			<td class="numeros">294.87</td>
+			<td class="numeros">1,994.34</td>
+			<td class="numeros">229.91</td>
+			<td class="numeros">307.45</td>
+			<td class="numeros">-</td>
+			<td class="numeros">250.02</td>
+			<td class="numeros">2,116.09</td>
+			<td class="numeros">-</td>
+			<td class="col_right numeros">6,937.00</td>
+			<td class="col_right numeros">-</td>
+		</tr> <!-- END TOTAL_INTERES -->
+		
+	</tbody>
+</table>
+</div>
+
+
 {% endblock %}
