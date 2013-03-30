@@ -1,33 +1,32 @@
 from django.db import models
 from datetime import datetime
 
-class country(models.Model):
-	name 			= models.CharField(unique=True, max_length=200)
+class pais(models.Model):
+	pais 			= models.CharField(unique=True, max_length=200)
 	status 			= models.BooleanField(default=True)	
 	def __unicode__(self):		
-		return self.name
+		return self.pais
 
-class frequency(models.Model):
+class frecuencia(models.Model):
 	description		= models.CharField(max_length=200,unique=True)
 	def __unicode__(self):		
 		return self.description
 	
-class funder(models.Model):
-	name 			= models.CharField(unique=True, max_length=200)
-	country			= models.ForeignKey(country)
-	status			= models.BooleanField(default=True)
-	created_at		= models.DateTimeField(default=datetime.now())
+class inversor(models.Model):
+	inversor		= models.CharField(unique=True, max_length=200)
+	pais			= models.ForeignKey(pais)
+	estado			= models.BooleanField(default=True)
 	def __unicode__(self):		
 		return self.name
 
-class loan(models.Model):
-	funder     		= models.ForeignKey(funder)
+class financiamiento(models.Model):
+	inversor     	= models.ForeignKey(inversor)
 	principal   	= models.DecimalField(max_digits=19, decimal_places=2)
-	term	    	= models.IntegerField()
+	plazo			= models.IntegerField()
 	interest		= models.DecimalField(max_digits=19, decimal_places=2)
-	frequency	 	= models.ForeignKey(frequency)	
-	received_at  	= models.DateTimeField('Received date')
-	status			= models.BooleanField(default=True)
+	frecuencia	 	= models.ForeignKey(frecuencia)	
+	recibido_el  	= models.DateTimeField('Fecha recibido')
+	estado			= models.BooleanField(default=True)
 	def __unicode__(self):		
 		return '%s | %s| %s'%(self.id,self.principal,self.funder.name)
 	
